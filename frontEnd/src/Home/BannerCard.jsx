@@ -13,7 +13,7 @@ import { EffectCards } from 'swiper/modules';
 
 export default function App() {
   return (
-    <>
+    <div className='banner'>
       <Swiper
         effect={'cards'}
         grabCursor={true}
@@ -21,7 +21,7 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide className='book2'></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
@@ -30,6 +30,6 @@ export default function App() {
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
