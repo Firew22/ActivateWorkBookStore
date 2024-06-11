@@ -33,8 +33,8 @@ const Navbar = () => {
 
     return (
         <header className={`${isSticky ? 'sticky top-0 z-50 bg-white shadow-md' : ''}`}>
-            <nav className="flex justify-between items-center p-4">
-                <div className="flex items-center gap-2">
+            <nav className="flex justify-between items-center p-8">
+                <div className="flex justify-between items-center text-base gap-8">
                     {/* Logo */}
                     <Link to="/" className="text-2xl font-bold text-blue-700 flex items-center gap-2">
                         <FaBlog className="inline-block" />
@@ -51,10 +51,6 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                {/* Button for large devices */}
-                <div className="hidden lg:flex items-center space-x-12">
-                    <button><FaBarsStaggered className="w-5 hover:text-blue-700" /></button>
-                </div>
                 {/* Menu button for mobile devices */}
                 <div className="md:hidden">
                     <button onClick={toggleMenu} className="text-black focus:outline-none">
