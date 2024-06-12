@@ -12,56 +12,27 @@ import ManageBooks from '../dashBoard/ManageBooks';
 import EditBook from '../dashBoard/EditBook';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
+    {
+    path: '/',
     element: <App />,
     children: [
+      { path: '/', element: <Home /> },
+      { path: 'shop', element: <Shop /> },
+      { path: 'about', element: <About /> },
+      { path: 'blog', element: <Blog /> },
+      { path: 'book/:id', element: <SingleBook />, loader: ({ params }) => fetch(`http://localhost:5173/book/${params.id}`) },
       {
-        path: "/",
-        element: <Home />
-      },
-      {
-        path: "/shop",
-        element: <Shop />
-      },
-      {
-        path: "/about",
-        element: <About />
-      },
-      {
-        path: "/blog",
-        element: <Blog />
-      },
-      {
-        path: "/book/:id",
-        element: <SingleBook />,
-        loader: ({ params }) => fetch(`http://localhost:5173/book/${params.id}`)
-      },
-      {
-        path: "admin/dashboard",
+        path: 'admin/dashboard',
         element: <DashboardLayout />,
         children: [
-          {
-            path: "",  // Default path for "admin/dashboard"
-            element: <DashBoard />
-          },
-          {
-            path: "upload",
-            element: <UploadBooks />
-          },
-          {
-            path: "manage",
-            element: <ManageBooks />
-          },
-          {
-            path: "edit-books/:id",
-            element: <EditBook />,
-            loader: ({ params }) => fetch(`http://localhost:5173/book/${params.id}`)
-          }
+          { path: '', element: <DashBoard /> }, // Default path for "admin/dashboard"
+          { path: 'upload', element: <UploadBooks /> },
+          { path: 'manage', element: <ManageBooks /> },
+          { path: 'edit-books/:id', element: <EditBook />, loader: ({ params }) => fetch(`http://localhost:5173/book/${params.id}`) }
         ]
       }
     ]
-  },
+  }
 ]);
 
 
