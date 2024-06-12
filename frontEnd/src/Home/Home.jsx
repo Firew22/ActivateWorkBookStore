@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
-import FavoriteBooks from './FavoriteBooks';
+import FavoriteBooks from './BestSellerBooks';
+import FavBooks from './FavBooks';
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div >
       <Banner />
       <FavoriteBooks />
+      <FavBooks />
     </div>
    
   );
