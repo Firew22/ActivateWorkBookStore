@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBarsStaggered, FaBlog, FaXmark } from 'react-icons/fa6';
+import { AuthContext } from '../contexts/AuthProvider';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isSticky, setSticky] = useState(false);
+    const { user } = useContext(AuthContext); // Destructure user from AuthContext
 
     // Toggle menu
     const toggleMenu = () => {
@@ -27,7 +29,6 @@ const Navbar = () => {
         { link: 'About', path: '/about' },
         { link: 'Shop', path: '/shop' },
         { link: 'Sell Your Book', path: '/admin/dashboard' },
-        { link: 'Login', path: '/login' },
         { link: 'Blog', path: '/blog' },
     ];
 
@@ -50,6 +51,19 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
+                    {user ? (
+                        <li>
+                            <span className="block text-base text-black uppercase cursor-pointer">
+                                {user.email}
+                            </span>
+                        </li>
+                    ) : (
+                        <li>
+                            <Link to="/login" className="block text-base text-black uppercase cursor-pointer hover:text-blue-700">
+                                Login
+                            </Link>
+                        </li>
+                    )}
                 </ul>
                 {/* Menu button for mobile devices */}
                 <div className="md:hidden">
@@ -69,6 +83,19 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+                        {user ? (
+                            <li>
+                                <span className="block text-base text-black uppercase cursor-pointer">
+                                    {user.email}
+                                </span>
+                            </li>
+                        ) : (
+                            <li>
+                                <Link to="/login" className="block text-base text-black uppercase cursor-pointer hover:text-blue-700" onClick={() => setMenuOpen(false)}>
+                                    Login
+                                </Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
             )}
