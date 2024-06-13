@@ -9,7 +9,7 @@ User Authentication (Email/Password, Google)
 CRUD Operations (Create, Read, Update, Delete) for Books
 Responsive UI using Flowbite components
 
-***********
+ ********************************
 *** Technologies Used ***
 
 ** Frontend **
