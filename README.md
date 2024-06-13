@@ -14,9 +14,9 @@ Responsive UI using Flowbite components
 
 ** Frontend **
 
-##React.js:## A JavaScript library for building user interfaces.
-##Flowbite:## A component library for building responsive and accessible user interfaces.
-##Tailwind CSS:## A utility-first CSS framework for styling.
+** React.js:**  A JavaScript library for building user interfaces.
+Flowbite: A component library for building responsive and accessible user interfaces.
+Tailwind CSS: A utility-first CSS framework for styling.
 
 ** Backend **
 ** Firebase **
