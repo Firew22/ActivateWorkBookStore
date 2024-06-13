@@ -10,21 +10,21 @@ CRUD Operations (Create, Read, Update, Delete) for Books
 Responsive UI using Flowbite components
 
 ***********
-***Technologies Used***
+*** Technologies Used ***
 
-**Frontend**
+** Frontend **
 
 ##React.js:## A JavaScript library for building user interfaces.
 ##Flowbite:## A component library for building responsive and accessible user interfaces.
 ##Tailwind CSS:## A utility-first CSS framework for styling.
 
-**Backend**
-##Firebase##
-##MOngoDb, Mongoose##
-##Express##
-##NOdeJs##
+** Backend **
+** Firebase **
+** MOngoDb, Mongoose **
+** Express **
+ **NOdeJs **
 
-**Installation**
+*** Installation ***
 git clone (https://github.com/Firew22/ActivateWorkBookStore.git)
 cd bookStore 
 
