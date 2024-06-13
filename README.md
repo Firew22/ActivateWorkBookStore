@@ -25,8 +25,8 @@ Responsive UI using Flowbite components
 ##NOdeJs##
 
 **Installation**
-git clone https://github.com/yourusername/book-management-system.git
-cd book-management-system
+git clone [https://github.com/yourusername/book-management-system.git](https://github.com/Firew22/ActivateWorkBookStore.git)
+cd bookStore 
 
 
 npm install
